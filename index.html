@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa Ankerplatz</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #1e3a8a, #0f172a);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #0ea5e9;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <a href="#ueber">Über</a>
+  <a href="#angebot">Angebot</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<div class="hero">
+  <h1>Villa Ankerplatz</h1>
+  <p>Ein sicherer Ort. Ein neuer Anfang. Eine echte Zukunft.</p>
+  <button class="btn" onclick="scrollToContact()">Kontakt</button>
+</div>
+
+<section id="ueber">
+  <h2>Über uns</h2>
+  <p style="text-align:center; opacity:0.8;">
+    Die Villa Ankerplatz ist eine moderne Jugendwohngruppe,
+    die jungen Menschen Stabilität, Unterstützung und Perspektiven bietet.
+  </p>
+</section>
+
+<section id="angebot">
+  <h2>Unser Angebot</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>24/7 Betreuung</h3>
+      <p>Immer da, wenn du Unterstützung brauchst.</p>
+    </div>
+
+    <div class="card">
+      <h3>Schule & Zukunft</h3>
+      <p>Wir helfen dir bei Ausbildung, Schule und Beruf.</p>
+    </div>
+
+    <div class="card">
+      <h3>Freizeit</h3>
+      <p>Sport, Ausflüge und gemeinsame Aktivitäten.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p style="text-align:center; opacity:0.8;">
+    E-Mail: info@villa-ankerplatz.de<br>
+    Telefon: 01234 567890
+  </p>
+</section>
+
+<footer>
+  © 2026 Villa Ankerplatz
+</footer>
+
+<script>
+function scrollToContact() {
+  document.getElementById("kontakt").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
