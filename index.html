@@ -6,158 +6,83 @@
 <title>Villa Ankerplatz</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: system-ui, Arial;
-}
-
 body{
-  background:#f6f8fc;
-  color:#111827;
-}
-
-/* TOP BAR */
-nav{
-  position:sticky;
-  top:0;
-  background:rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  z-index:1000;
-}
-
-nav a{
-  text-decoration:none;
-  color:#111827;
-  font-weight:600;
-}
-
-nav a:hover{
-  color:#2563eb;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f7fb;
+  color:#333;
 }
 
 /* HERO */
 .hero{
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  color:white;
+  padding:100px 20px;
   text-align:center;
-  padding:20px;
-  background:
-    radial-gradient(circle at top, #dbeafe, transparent 60%),
-    radial-gradient(circle at bottom, #eef2ff, transparent 60%);
 }
 
 .hero h1{
-  font-size:4rem;
-  letter-spacing:-1px;
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
 .hero p{
-  margin-top:15px;
   font-size:1.2rem;
-  color:#4b5563;
-  max-width:600px;
+  opacity:0.9;
 }
 
 .btn{
-  margin-top:25px;
-  padding:14px 28px;
+  margin-top:20px;
+  padding:12px 25px;
   border:none;
-  border-radius:12px;
-  background:#2563eb;
-  color:white;
-  font-weight:600;
+  border-radius:8px;
+  background:white;
+  color:#1e3c72;
+  font-weight:bold;
   cursor:pointer;
-  transition:0.3s;
 }
 
 .btn:hover{
-  transform:translateY(-3px);
-  background:#1d4ed8;
+  opacity:0.9;
 }
 
 /* SECTIONS */
 section{
-  max-width:1100px;
+  max-width:1000px;
   margin:auto;
-  padding:90px 20px;
+  padding:60px 20px;
 }
 
 h2{
   text-align:center;
-  font-size:2.2rem;
-  margin-bottom:40px;
+  margin-bottom:30px;
 }
 
 /* CARDS */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .card{
   background:white;
   padding:25px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  transition:0.3s;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:transform 0.2s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-}
-
-/* FORM */
-form{
-  background:white;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-input,textarea{
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #e5e7eb;
-  font-size:1rem;
-}
-
-textarea{
-  min-height:140px;
-}
-
-button[type="submit"]{
-  background:#22c55e;
-  color:white;
-  border:none;
-  padding:14px;
-  border-radius:12px;
-  font-weight:600;
-  cursor:pointer;
-}
-
-button[type="submit"]:hover{
-  background:#16a34a;
+  transform:translateY(-5px);
 }
 
 /* FOOTER */
 footer{
+  background:#1e3c72;
+  color:white;
   text-align:center;
-  padding:40px;
-  color:#6b7280;
+  padding:20px;
 }
 </style>
 
@@ -165,64 +90,58 @@ footer{
 
 <body>
 
-<nav>
-  <a href="#ueber">Über</a>
-  <a href="#angebot">Angebot</a>
-  <a href="#bewerbung">Bewerbung</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
-
 <div class="hero">
   <h1>Villa Ankerplatz</h1>
-  <p>Ein moderner Ort für junge Menschen – sicher, begleitet und zukunftsorientiert.</p>
-  <button class="btn" onclick="scrollToForm()">Jetzt bewerben</button>
+  <p>Jugendwohngruppe – Selbstständig werden mit Unterstützung</p>
+  <button class="btn" onclick="scrollToKontakt()">Kontakt</button>
 </div>
 
-<section id="ueber">
+<section>
   <h2>Über uns</h2>
-  <p style="text-align:center; color:#6b7280; max-width:700px; margin:auto;">
-    Die Villa Ankerplatz bietet jungen Menschen ein stabiles Zuhause,
-    Unterstützung im Alltag und echte Perspektiven für die Zukunft.
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    Die Villa Ankerplatz bietet jungen Menschen einen sicheren Wohnort,
+    an dem sie Schritt für Schritt lernen, selbstständig zu leben.
+    Dabei werden sie individuell begleitet und in ihrem Alltag unterstützt.
   </p>
 </section>
 
-<section id="angebot">
+<section>
   <h2>Unser Angebot</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>Betreuung</h3>
-      <p>Individuelle Unterstützung rund um die Uhr.</p>
+      <p>
+        In der Villa Ankerplatz leben Jugendliche weitgehend selbstständig
+        und übernehmen Verantwortung für ihren Alltag. Pädagogische Fachkräfte
+        sind täglich mehrere Stunden vor Ort und unterstützen bei Fragen,
+        Problemen und wichtigen Entscheidungen.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Schule & Ausbildung</h3>
-      <p>Begleitung bei Schule, Praktikum und Ausbildung.</p>
+      <h3>Alltag</h3>
+      <p>
+        Die Bewohner gestalten ihren Alltag eigenständig und lernen,
+        Verantwortung für Schule, Ausbildung und persönliche Aufgaben zu übernehmen.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Freizeit</h3>
-      <p>Gemeinsame Aktivitäten und Ausgleich im Alltag.</p>
+      <h3>Entwicklung</h3>
+      <p>
+        Ziel ist es, Jugendliche auf ein selbstständiges Leben vorzubereiten
+        und ihre persönlichen Stärken zu fördern.
+      </p>
     </div>
 
   </div>
 </section>
 
-<section id="bewerbung">
-  <h2>Bewerbung</h2>
-
-  <form action="DEIN_FORMSPREE_LINK_HIER" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="E-Mail" required>
-    <textarea name="message" placeholder="Deine Bewerbung..." required></textarea>
-    <button type="submit">Bewerbung absenden</button>
-  </form>
-</section>
-
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p style="text-align:center; color:#6b7280;">
+  <p style="text-align:center;">
     E-Mail: info@villa-ankerplatz.de<br>
     Telefon: 01234 567890
   </p>
@@ -233,8 +152,8 @@ footer{
 </footer>
 
 <script>
-function scrollToForm(){
-  document.getElementById("bewerbung").scrollIntoView({behavior:"smooth"});
+function scrollToKontakt(){
+  document.getElementById("kontakt").scrollIntoView({behavior:"smooth"});
 }
 </script>
 
